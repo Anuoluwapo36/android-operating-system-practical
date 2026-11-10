@@ -146,20 +146,20 @@ android-operating-system-practical-main/
 
 ```
 ┌────────────────────────────────────────────────────────────┐
-│  MainActivity                                              │
-│  ├── SwipeRefreshLayout + RecyclerView + SearchView         │
-│  ├── Pagination state (currentPage, isLoading, isLastPage)  │
-│  └── Single-thread Executor for all DB work                 │
+  MainActivity                                              
+  ├── SwipeRefreshLayout + RecyclerView + SearchView        
+  ├── Pagination state (currentPage, isLoading, isLastPage)  
+  └── Single-thread Executor for all DB work                 
 └───────────────┬──────────────────────────┬─────────────────┘
                 │                          │
                 ▼                          ▼
       ┌───────────────────┐      ┌──────────────────────┐
       │   RetrofitClient  │      │      AppDatabase     │
-      │   + ApiService    │      │   (Room singleton)  │
-      │  GET /posts?page  │      │  ┌───────────────┐  │
-      └─────────┬─────────┘      │  │ PostDao      │  │
-                │                │  │ BookmarkDao  │  │
-                │ JSON           │  └───────────────┘  │
+      │   + ApiService    │      │   (Room singleton)   │
+      │  GET /posts?page  │      │  ┌───────────────┐   │
+      └─────────┬─────────┘      │  │ PostDao      │    │
+                │                │  │ BookmarkDao  │    │
+                │ JSON           │  └───────────────┘   │
                 ▼                └──────────┬───────────┘
         ┌───────────────┐                   │
         │     Post      │                   ▼
