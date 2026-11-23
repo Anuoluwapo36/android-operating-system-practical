@@ -13,3 +13,25 @@
 .externalNativeBuild
 .cxx
 local.properties
+# Build output
+build/
+target/
+out/
+*.class
+*.jar
+*.war
+*.ear
+
+# Gradle
+.gradle/
+.kotlin/
+local.properties
+
+# IDE
+.idea/
+*.iml
+.vscode/
+
+# OS
+.DS_Store
+Thumbs.db
